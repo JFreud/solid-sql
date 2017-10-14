@@ -18,7 +18,7 @@ command = "CREATE TABLE peeps (name TEXT, age INTEGER, id INTEGER)"
 c.execute(command)
 
 
-with open ("courses.csv") as course_file:
+with open ("data/courses.csv") as course_file:
     reader = csv.DictReader(course_file)
     for row in reader:
         #print(row)
@@ -26,7 +26,7 @@ with open ("courses.csv") as course_file:
         command = "INSERT INTO courses VALUES (" + info + ")"
         c.execute(command)
 
-with open ("peeps.csv") as course_file:
+with open ("data/peeps.csv") as course_file:
     reader = csv.DictReader(course_file)
     for row in reader:
         #print(row)
